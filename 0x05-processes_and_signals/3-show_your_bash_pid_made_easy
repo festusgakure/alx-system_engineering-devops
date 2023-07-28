@@ -1,4 +1,3 @@
-#!/bin/bash
-
-current_script_pid=$$
-grep -s -l -r -w 'bash' /proc/*/comm 2>/dev/null | grep -v "/$current_script_pid/comm" | xargs -n 1 -I {} sh -c 'echo $(basename $(dirname {})) $(cat {})'
+#!/usr/bin/env bash
+# Bash script that displays the PID, along with the process name, of processes whose name contain the word bash.
+pgrep -l bash

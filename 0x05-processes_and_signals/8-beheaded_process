@@ -1,4 +1,4 @@
-#!/bin/bash
-
-# Send termination signal to the '7-highlander' process
-pkill -f "7-highlander"
+#!/usr/bin/env bash
+# Bash script that kills the process 7-highlander.
+file="7-highlander"
+pkill -f -SIGKILL $file
